@@ -27,7 +27,7 @@ function ready(){
   document.body.classList.add("ready");
   setTimeout(typeAll,450);
 }
-window.addEventListener("load",function(){setTimeout(ready,Math.max(0,1200-(Date.now()-t0)))});
+window.addEventListener("load",function(){setTimeout(ready,300)});
 setTimeout(ready,5000);
 
 /* ---------- 2. Apparition au scroll (en cascade) ---------- */

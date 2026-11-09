@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Album Maya — MAYOULOU Aily Maya Claire-Kimia</title><meta name="description" content="L’album photo de Maya : de sa naissance à ses plus beaux sourires.">
+<title>Maya</title><meta name="description" content="L’album photo de Maya.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body class="home"><header class="bar"><a class="logo" href="index.html">Maya</a><a class="menu" href="index.html#chapitres">Sommaire</a></header>
-<section class="hero"><div class="hero-txt"><p class="eyebrow">Album photo</p><h1>Bienvenue dans l’univers de<br><em>Maya</em></h1>
-<p class="full">MAYOULOU Aily Maya Claire-Kimia</p>
-<p class="dedi">Ta venue au monde a complètement changé le cours de nos vies, petit ange ! Pour toi, je ferai l’impossible. Que Dieu te donne une santé indestructible.</p>
-<a class="btn" href="#chapitres">Découvrir l’album</a><p class="meta">8 chapitres · 57 photos · 32 vidéos</p></div>
-<div class="hero-img"><img src="images/EIRD0126.JPG" alt="Maya nouveau-née dans son siège auto rose" width="900" height="1600"></div></section>
-<section id="chapitres" class="chapters"><h2>Les chapitres</h2><p class="sub">Classés dans l’ordre des souvenirs, de la naissance à aujourd’hui.</p><div class="grid"><a class="card reveal" href="naissance.html"><img src="images/AWKUE0143.JPG" alt="" loading="lazy"><div class="cap"><span class="num">01</span><h3>Naissance de Maya</h3><p>La venue d’une princesse</p><small>10 photos</small></div></a>
-<a class="card reveal" href="premiers-jours.html"><img src="images/IMG_7857.JPG" alt="" loading="lazy"><div class="cap"><span class="num">02</span><h3>La beauté à l’état pur</h3><p>Une véritable boule d’énergie</p><small>15 photos</small></div></a>
-<a class="card reveal" href="maman.html"><img src="images/IMG_3983.JPG" alt="" loading="lazy"><div class="cap"><span class="num">03</span><h3>Le regard d’une mère forte et dévouée</h3><p>Plus que déterminée !</p><small>3 photos</small></div></a>
-<a class="card reveal" href="famille.html"><img src="images/IMG_7855.JPG" alt="" loading="lazy"><div class="cap"><span class="num">04</span><h3>La prunelle de mes yeux</h3><p>Le chouchou de papi et mamie</p><small>5 photos</small></div></a>
-<a class="card reveal" href="bapteme.html"><img src="images/DJLZ4280.JPG" alt="" loading="lazy"><div class="cap"><span class="num">05</span><h3>Baptême de Maya</h3><p>Un jour pas comme les autres</p><small>10 photos</small></div></a>
-<a class="card reveal" href="sourire.html"><img src="images/IMG_8057.JPG" alt="" loading="lazy"><div class="cap"><span class="num">06</span><h3>Le sourire d’une princesse</h3><p>Des moments rares et précieux</p><small>6 photos</small></div></a>
-<a class="card reveal" href="soleil.html"><img src="images/IMG_8804.JPG" alt="" loading="lazy"><div class="cap"><span class="num">07</span><h3>Mon rayon de soleil</h3><p>La meilleure chose qui me soit arrivée</p><small>5 photos</small></div></a>
-<a class="card reveal" href="videos.html"><img src="images/WhatsApp%20Image%202026-11-09%20at%2014.23.40%20%281%29.jpeg" alt="" loading="lazy"><div class="cap"><span class="num">08</span><h3>Maya en vidéo</h3><p>Ses plus beaux moments en mouvement</p><small>3 photos · 32 vidéos</small></div></a>
-</div></section>
-<footer class="foot"><p>Pour toi, petit ange — Maya Mayoulou</p></footer><script src="app.js"></script></body></html>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fbf6f3;--ink:#3b2f33;--mut:#8a7a7e;--rose:#e8788f;--rose2:#f3dfe3;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",system-ui,sans-serif}
+html,body{height:100%}
+body{background:radial-gradient(circle at 50% 40%,#fff,var(--bg) 60%,var(--rose2));color:var(--ink);font:300 16px/1.6 var(--sans);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:24px;padding-top:max(24px,env(safe-area-inset-top));padding-bottom:max(24px,env(safe-area-inset-bottom))}
+.heart{width:clamp(160px,38vw,260px);height:auto;overflow:visible;filter:drop-shadow(0 12px 26px rgba(232,120,143,.35))}
+.heart path{fill:var(--rose);fill-opacity:0;stroke:var(--rose);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 3s .4s cubic-bezier(.6,.1,.3,1) forwards,fillin 1.2s 3.2s ease forwards}
+.heart{animation:beat 1.4s 4.4s ease-in-out infinite;transform-origin:50% 55%}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fillin{to{fill-opacity:1}}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.1)}30%{transform:scale(1)}45%{transform:scale(1.06)}}
+h1{margin-top:26px;font:italic 500 clamp(52px,13vw,110px)/1 var(--serif);color:var(--rose);letter-spacing:.05em;min-height:1em}
+.sub{margin-top:10px;font:italic 500 clamp(18px,3vw,24px) var(--serif);color:#5b4a4f;min-height:1.6em}
+.typing::after{content:"";display:inline-block;width:2px;height:.85em;margin-left:3px;vertical-align:-.05em;background:currentColor;animation:bl .7s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.btn{margin-top:30px;display:inline-block;padding:14px 38px;border:1px solid var(--ink);border-radius:99px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:inherit;text-decoration:none;opacity:0;transform:translateY(10px);transition:opacity .8s,transform .8s,background .3s,color .3s}
+.btn.on{opacity:1;transform:none}.btn:hover{background:var(--ink);color:#fff}
+.skip{position:fixed;top:max(14px,env(safe-area-inset-top));right:18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);text-decoration:none}
+.fl{position:fixed;bottom:-30px;color:var(--rose);opacity:0;pointer-events:none;animation:up var(--d) linear forwards}
+@keyframes up{10%{opacity:.5}to{transform:translateY(-110vh) rotate(var(--r));opacity:0}}
+@media(prefers-reduced-motion:reduce){.heart,.heart path{animation:none}.heart path{stroke-dashoffset:0;fill-opacity:1}.btn{opacity:1;transform:none;transition:none}}
+</style></head><body>
+<a class="skip" href="accueil.html">Passer</a>
+<svg class="heart" viewBox="0 0 100 92" aria-hidden="true"><path pathLength="1" d="M50 86 C18 63 6 44 6 29 C6 16 16 7 28 7 C38 7 46 12 50 20 C54 12 62 7 72 7 C84 7 94 16 94 29 C94 44 82 63 50 86 Z"/></svg>
+<h1 id="t1" data-t="Maya"></h1>
+<p class="sub" id="t2" data-t="Pour toi, petit ange"></p>
+<a class="btn" id="go" href="accueil.html">Entrer dans l’album</a>
+<script>
+(function(){
+var rm=matchMedia("(prefers-reduced-motion:reduce)").matches,go=document.getElementById("go"),left=false;
+function enter(){location.replace("accueil.html")}
+function type(el,sp,cb){var s=el.dataset.t,k=0;el.classList.add("typing");(function st(){el.textContent=s.slice(0,++k);if(k<s.length)setTimeout(st,sp);else{el.classList.remove("typing");cb&&cb()}})()}
+function hearts(){
+  for(var n=0;n<14;n++){var h=document.createElement("span");h.className="fl";h.textContent="♥";
+    h.style.left=Math.random()*100+"vw";h.style.fontSize=(12+Math.random()*20)+"px";
+    h.style.setProperty("--d",(5+Math.random()*5)+"s");h.style.setProperty("--r",(Math.random()*60-30)+"deg");
+    h.style.animationDelay=Math.random()*3+"s";document.body.appendChild(h)}
+}
+if(rm){document.getElementById("t1").textContent="Maya";document.getElementById("t2").textContent="Pour toi, petit ange";return}
+setTimeout(function(){type(document.getElementById("t1"),170,function(){
+  setTimeout(function(){type(document.getElementById("t2"),60,function(){go.classList.add("on");hearts();setTimeout(enter,3500)})},250)})},3000);
+})();
+</script></body></html>

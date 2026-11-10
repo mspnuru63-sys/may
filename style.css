@@ -45,3 +45,10 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
 .lb img[hidden],.lb video[hidden]{display:none}
 @media(prefers-reduced-motion:reduce){.typing::after{animation:none}}
 .gallery video{aspect-ratio:9/16;object-fit:cover}
+
+/* ===== Lumière autour de la photo d'accueil ===== */
+.hero-img img{box-shadow:0 0 46px 8px rgba(243,182,196,.55),0 0 110px 30px rgba(243,223,227,.55),0 30px 70px rgba(120,70,80,.22)}
+.hero-img img{animation:rise 1.2s .6s both cubic-bezier(.2,.7,.2,1),halo 4.5s 1.8s ease-in-out infinite}
+@keyframes halo{
+ 0%,100%{box-shadow:0 0 46px 8px rgba(243,182,196,.55),0 0 110px 30px rgba(243,223,227,.55),0 30px 70px rgba(120,70,80,.22)}
+ 50%{box-shadow:0 0 66px 16px rgba(240,205,150,.7),0 0 150px 48px rgba(243,200,210,.65),0 30px 70px rgba(120,70,80,.22)}}

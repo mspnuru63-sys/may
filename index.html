@@ -30,11 +30,12 @@ h1{margin-top:26px;font:italic 500 clamp(52px,13vw,110px)/1 var(--serif);color:v
 <h1 id="t1" data-t="Maya"></h1>
 <p class="sub" id="t2" data-t="Pour toi, petit ange"></p>
 <a class="btn" id="go" href="accueil.html">Entrer dans l’album</a>
+<script src="app.js"></script>
 <script>
 (function(){
 var rm=matchMedia("(prefers-reduced-motion:reduce)").matches,go=document.getElementById("go"),left=false;
 function enter(){location.replace("accueil.html")}
-function type(el,sp,cb){var s=el.dataset.t,k=0;el.classList.add("typing");(function st(){el.textContent=s.slice(0,++k);if(k<s.length)setTimeout(st,sp);else{el.classList.remove("typing");cb&&cb()}})()}
+function type(el,sp,cb){var s=el.dataset.t,k=0;el.classList.add("typing");(function st(){el.textContent=s.slice(0,++k);window.MayaSound&&MayaSound.key(s.charAt(k-1));if(k<s.length)setTimeout(st,sp);else{el.classList.remove("typing");cb&&cb()}})()}
 function hearts(){
   for(var n=0;n<14;n++){var h=document.createElement("span");h.className="fl";h.textContent="♥";
     h.style.left=Math.random()*100+"vw";h.style.fontSize=(12+Math.random()*20)+"px";
